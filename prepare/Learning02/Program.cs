@@ -16,10 +16,10 @@ class Program
         job2._startYear = 2016;
         job2._endYear = 2023;
 
-        Resume resume = new Resume();
-        resume._name = "Tyler McMurtrey";
-        resume._jobs.Add(job1);
-        resume._jobs.Add(job2);
-        resume.Display();
+        // Resume resume = new Resume();
+        // resume._name = "Tyler McMurtrey";
+        // resume._jobs.Add(job1);
+        // resume._jobs.Add(job2);
+        // resume.Display();
     }
 }
