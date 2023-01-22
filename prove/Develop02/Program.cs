@@ -10,9 +10,11 @@ class Program
         Journal journal1 = new Journal();
     do{
         Console.WriteLine("\nPlease select one of the following choices:");
+        Console.Clear();
         Console.WriteLine("1. Write \n2. Display \n3. Add Prompt \n4. Show Prompts \n5. Save \n6. Load \n7. Quit");
         Console.Write("What would you like to do? ");
         choice = Console.ReadLine();
+        // Console.Clear();
         switch (choice)
         {
             case "1":
