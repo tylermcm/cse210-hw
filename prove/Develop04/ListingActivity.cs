@@ -21,12 +21,12 @@ public class ListingActivity
 
     private void Listing()
     {
-        _activity.ActivityStart();
+        _activity.activityStart();
         Console.WriteLine("List as many responses you can to the follow prompt:");
-        _activity.ListingPrompt();
-        _activity.StartingTimer();
+        _activity.listingPrompt();
+        _activity.startingTimer();
         listingCountdown();
-        _activity.ActivityEnd();
+        _activity.activityEnd();
     }
     private void listingCountdown()
     {     

@@ -19,11 +19,11 @@ public class ReflectingActivity : Activity
 
     private void Reflecting()
     {
-        _activity.ActivityStart();
+        _activity.activityStart();
         Console.WriteLine("Consider the follow prompt:\n");
-        _activity.ReflectingPrompt();
+        _activity.reflectingPrompt();
         Countdown();
-        _activity.ActivityEnd();
+        _activity.activityEnd();
     }
 
     private void Countdown()

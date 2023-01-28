@@ -33,13 +33,13 @@ public class Activity
         _duration = int.Parse(Console.ReadLine());
     }
 
-    public void ActivityStart()
+    public void activityStart()
     {
         Console.Clear();
         Console.WriteLine("Get Ready...");
         Timer();
     }
-    public void ActivityEnd()
+    public void activityEnd()
     {
         Console.WriteLine("\nWell done!");
         Timer();
@@ -48,7 +48,7 @@ public class Activity
         Console.Clear();
     }
 
-    public void StartingTimer()
+    public void startingTimer()
     {
         for (int i = 3; i >= 0; i--)
         {
@@ -88,7 +88,7 @@ public class Activity
         Console.SetCursorPosition(Console.CursorLeft - 1, Console.CursorTop);
     }
 
-    public void ListingPrompt()
+    public void listingPrompt()
     {
         Random rand = new Random();
         int randIndex = rand.Next(0, _listingQuestions.Count - 1);
@@ -98,7 +98,7 @@ public class Activity
 
     }
 
-        public void ReflectingPrompt()
+        public void reflectingPrompt()
     {
         Random rand = new Random();
         int randIndex = rand.Next(0, _questions.Count - 1);

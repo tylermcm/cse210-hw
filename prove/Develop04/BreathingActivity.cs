@@ -20,9 +20,9 @@ public class BreathingActivity : Activity
 
     private void Breathing()
     {
-        _activity.ActivityStart();
+        _activity.activityStart();
         Countdown();
-        _activity.ActivityEnd();
+        _activity.activityEnd();
     }
 
     private void Countdown()
