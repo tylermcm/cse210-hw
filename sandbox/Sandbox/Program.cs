@@ -4,15 +4,32 @@ class Program
 {
     static void Main(string[] args)
     {
-        Random rnd = new Random();
-        var s = "12345";
-        var result = s.ToArray();
-        var randomIds = Enumerable.Range(0, s.Length).OrderBy(x => rnd.Next()).Take(3);
-        foreach (var id in randomIds)
+        ConsoleSpiner spin = new ConsoleSpiner();
+        Console.Write("Working....");
+        while (true)
         {
-            result[id] = '*';
+            spin.Turn();
         }
-        var stringResult = String.Join("", result);
-        Console.WriteLine(stringResult);
-        }    
+    }
+
+    public class ConsoleSpiner
+    {
+        int counter;
+        public ConsoleSpiner()
+        {
+            counter = 0;
+        }
+        public void Turn()
+        {
+            counter++;
+            switch (counter % 4)
+            {
+                case 0: Console.Write("/"); break;
+                case 1: Console.Write("-"); break;
+                case 2: Console.Write("\\"); break;
+                case 3: Console.Write("|"); break;
+            }
+            Console.SetCursorPosition(Console.CursorLeft - 1, Console.CursorTop);
+        }
+    }    
 }
