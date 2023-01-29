@@ -6,7 +6,7 @@ public class ReflectingActivity : Activity
     Activity _activity = new Activity();
     private int duration;
     
-    public ReflectingActivity()
+    public ReflectingActivity() : base()
     {
         Console.WriteLine("Welcome to the reflecting activity\n");
         Console.WriteLine("This activity will help you reflect on times in your life when you have show strength and resilience. This will help you reeconize the power you have and how you can use it in other aspects of your life.\n");

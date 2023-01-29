@@ -12,7 +12,6 @@ class Program
 
         do
         {
-            // Console.Clear();
             Console.WriteLine("Menu Options: ");
             Console.WriteLine("1. Start breathing activity \n2. Start reflecting activity \n3. Start listing activity \n4. Display number of activities completed \n5. Quit");
             Console.Write("Select a choice from the menu: ");

@@ -6,7 +6,7 @@ public class BreathingActivity : Activity
     Activity _activity = new Activity();
     private int duration;
     
-    public BreathingActivity()
+    public BreathingActivity() : base()
     {
         Console.WriteLine("Welcome to the Breathing Activity.\n");
         Console.WriteLine("This activity will help you relax by walking you through breathing in and out slowly. Clear you mind and focus on your breathing.\n");

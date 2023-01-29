@@ -1,14 +1,14 @@
 using System;
 
 
-public class ListingActivity
+public class ListingActivity : Activity
 {
     Activity _activity = new Activity();
     private int duration;
     private string _entry = "";
     private int _entryCount = 0;
 
-    public ListingActivity()
+    public ListingActivity() : base()
     {
         Console.WriteLine("Welcome to the Listing Activity.\n");
         Console.WriteLine("This activity will help you reflect on the good things in your life by having you list as many things as you can in a certain area.\n");
