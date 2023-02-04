@@ -6,10 +6,16 @@ class AllGoals
     private List<Goals> _allGoals = new List<Goals>();
     private int totalPoints;
     private int numEventsCompleted = 0;
+    private int levelUp = 0;
 
     public int getTotalPoints()
     {
         return totalPoints;
+    }
+
+    public int getLevel()
+    {
+        return levelUp;
     }
 
     public void addGoal(Goals _goal)
@@ -102,10 +108,16 @@ class AllGoals
         {
             totalPoints += _allGoals[recordEvent].getChecklistGoalBonus();
         }
+        if (totalPoints >= 1000)
+        {
+            levelUp++;
+            totalPoints = 0;
+            Console.WriteLine(string.Format("Congratulations! You've reached level {0}", levelUp));
+        }
     }
 
-    public void DisplayPoints(int _totalPoints)
+    public void DisplayPoints(int _totalPoints, int _levelUp)
     {
-        Console.WriteLine(string.Format("You have {0} points\n", _totalPoints));
+        Console.WriteLine(string.Format("You have {0} points\nYou are level {1}\n", _totalPoints, _levelUp));
     }
 }
