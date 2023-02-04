@@ -4,13 +4,12 @@ class Program
 {
     static void Main(string[] args)
     {
-        AllGoals allGoals = new AllGoals();
+        AllGoals goals = new AllGoals();
         int choice = 0;
-        
         do
         {
             Menu menu = new Menu();
-            allGoals.DisplayPoints(allGoals.getTotalPoints());
+            goals.DisplayPoints(goals.getTotalPoints(),goals.getLevel());
             menu.DisplayMainMenu();
             choice = menu.DisplayGetMainMenu();
             switch (choice)
@@ -44,24 +43,24 @@ class Program
                     }          
                     if (goal != null)
                     {
-                        allGoals.addGoal(goal);
+                        goals.addGoal(goal);
                     }    
                     break;
                 case 2:
                     Console.Clear();
-                    allGoals.DisplayGoals();
+                    goals.DisplayGoals();
                     break;
                 case 3:
                     Console.Clear();
-                    allGoals.SaveGoals();
+                    goals.SaveGoals();
                     break;
                 case 4:
                     Console.Clear();
-                    allGoals.LoadGoals();
+                    goals.LoadGoals();
                     break;
                 case 5:
                     Console.Clear();
-                    allGoals.DisplayGoalRecordEvent();
+                    goals.DisplayGoalRecordEvent();
                     break;
                 case 6:
                     Console.Clear();
