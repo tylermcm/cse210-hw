@@ -1,5 +1,5 @@
 using System;
-
+// Added code to display a 'level up' when the user reaches 1000 points
 class Program
 {
     static void Main(string[] args)
