@@ -5,19 +5,13 @@ class TireVolume : AllPrograms
 {
     private int width, a_ratio, diameter;
 
-    public TireVolume()
-    {
-        DisplayGetVolume();
-    } 
-
     public double volume(int _width, int _a_ratio, int _diameter)
     {
         return Math.Round((Math.PI * (Math.Pow(_width, 2) * _a_ratio * (_width * _a_ratio + 2540 * _diameter)) / 10_000_000_000),2);
     }
-    public void DisplayVolume()
+    public override string ToString()
     {
-        Console.WriteLine(string.Format("The approximate volume is {0} liters", volume(getWidth(), getRatio(), getDiameter())));
-        clearConsole();
+        return string.Format("The approximate volume is {0} liters", volume(getWidth(), getRatio(), getDiameter()));
     }
 
     public int getWidth()

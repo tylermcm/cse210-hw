@@ -5,8 +5,8 @@ using System.Text;
 class Wordle : AllPrograms
 {
     private int score, attempt, index, randIndex;
-    private bool correct = false, correctLength = false;
-    private string secretWord, hint, guess, playAgain;
+    private bool correct = false;
+    private string secretWord, hint, guess;
     private List<string> words = new List<string>{
         "salt", "doubt", "bag", "organization",
         "mother", "now", "silver", "animal", "impulse",
@@ -38,42 +38,23 @@ class Wordle : AllPrograms
             if (guess.Length != secretWord.Length)
             {
                 Console.WriteLine("You used the wrong number of letters, try again.");
-                correctLength = false;
+
             }
             else
             {
-                correctLength = true;
+                GiveHint();
+                Console.WriteLine("Your hint is {0}", hint);
             }
 
-            if (guess == secretWord){
+            if (guess == secretWord)
+            {
                 score++;
-                Console.WriteLine(string.Format("Congratulations! You guessed the word!\nThe word was {0}! \nIt took you {1} attempts. Your score is now {2}",secretWord, attempt, score));
-                Console.Write("Would you like to play again?(y/n) ");
-                playAgain = Console.ReadLine();
-                if (playAgain == "y")
-                {
-                    attempt = 0;
-                    Console.Clear();
-                    PlayWordle();
-                }
-                else{
-                    Console.WriteLine("Thanks for playing!");
-                    clearConsole();
-                    break;
-                }
                 correct = true;
             }
 
-            
-            if (correctLength == true)
-            {
-                GiveHint();
-                Console.WriteLine(string.Format("Your hint is {0}", hint)); 
-            }
-        
         }while (correct == false && guess != "quit");
     }
-    public void GiveHint()
+    private void GiveHint()
     {
         string[] stringHint = guess.Select(x => x.ToString()).ToArray();
         index = 0;
@@ -99,6 +80,10 @@ class Wordle : AllPrograms
             hint = sb1.ToString();
             index++;
         }
+    }
+    public override string ToString()
+    {
+        return string.Format("Congratulations! You guessed the word!\nThe word was {0}! \nIt took you {1} attempts. Your score is now {2}", secretWord, attempt, score);
 
     }
 }

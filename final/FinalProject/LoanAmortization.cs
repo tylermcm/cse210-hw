@@ -27,8 +27,6 @@ class LoanAmortization : AllPrograms
         Console.Write("Enter the loan term in months: ");
         loanTerm = int.Parse(Console.ReadLine());
 
-        Console.Write(MakeTable(loanAmount, interestRate, loanTerm));
-        clearConsole();
     }
     private string MakeTable(double _principal, double _interestRate, int _loanTerm)
     {
@@ -44,6 +42,10 @@ class LoanAmortization : AllPrograms
             table += string.Format("{0,-5} | {1, -10:0.00} | {2, -7:0.00} | {3, 5:0.00}\n", (count + 1), Math.Round((loanAmount), 2), interestPayment, principalPayment);
         }
         return table;
+    }
+    public override string ToString()
+    {
+        return string.Format(MakeTable(loanAmount, interestRate,loanTerm));
     }
 
 

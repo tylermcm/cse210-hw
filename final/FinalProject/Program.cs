@@ -29,6 +29,7 @@ class Program
                             Console.Clear();
                             Wordle wordle = new Wordle();
                             wordle.PlayWordle();
+                            Console.WriteLine(wordle.ToString());
                             break; 
                         case 4:
                             Console.Clear();
@@ -48,11 +49,13 @@ class Program
                             Console.Clear();
                             LoanAmortization loan = new LoanAmortization();
                             loan.DisplayTable();
+                            Console.WriteLine(loan.ToString());
                             break;
                         case 2:
                             Console.Clear();
                             TireVolume volume = new TireVolume();
-                            volume.DisplayVolume();
+                            volume.DisplayGetVolume();
+                            Console.WriteLine(volume.ToString());
                             break;
                         case 3:
                             Console.Clear();
